@@ -1,12 +1,12 @@
 # SudokuSolver
-[[MIT](https://opensource.org/licenses/MIT)
+[MIT](https://opensource.org/licenses/MIT)
 
 
 ## Welcome
-This is just a product of cheating-via-programming when I played Sudoku with some kids :)
+This is just a product of cheating-via-programming when I played Sudoku with some kids :)\
 It's not fully completed, just for fun.
-NO fancy algorithms here, like [SA](https://en.wikipedia.org/wiki/Simulated_annealing) or [GA](https://en.wikipedia.org/wiki/Genetic_algorithm).
-It's simple backtracking + constraint programming.
+NO fancy algorithms here, like [SA](https://en.wikipedia.org/wiki/Simulated_annealing) or [GA](https://en.wikipedia.org/wiki/Genetic_algorithm).\
+It's implemented with simple backtracking + constraint programming.\
 NOTE: only return one result even if there are multiple solutions
 
 ## TODO
@@ -15,15 +15,20 @@ NOTE: only return one result even if there are multiple solutions
 * more benchmarks
 
 ## It's simple
+header-only
+* SudokuSolver.h
+
 ### C++17 required& build
 ```
+#config
 cmake -H. -Bbuild
+#build
 cmake --build build --config Release
 ```
 
 ## SampleTest& benchmark
 ### SampleTest
-accepts single sudoku puzzle in a plain text format.
+accepts single sudoku puzzle in a plain text (2 dimensions)format.
 all sample txt files in "samples" folder
 .e.g
 ```
@@ -50,5 +55,5 @@ Sudoku::Strategy::FastFullScan steps [ avg: 137   max: 2166   min: 56 ]  time [ 
 Sudoku::Strategy::FastRowColScan steps [ avg: 138   max: 2331   min: 56 ]  time [ avg: 61439 ns  max: 996435 ns  min: 21383 ns]
 ```
 
-Source of benchmark test causes and Many Thanks to: [http://printable-sudoku-puzzles.com](http://printable-sudoku-puzzles.com/wfiles/)
+Source of benchmark test cases and Many Thanks to: [http://printable-sudoku-puzzles.com](http://printable-sudoku-puzzles.com/wfiles/)
 
